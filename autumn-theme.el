@@ -20,7 +20,7 @@
 (deftheme autumn "Low contrast dark autumn theme")
 
 (let* (
-      (background   "#101010")
+      (background   "#202020")
       (foreground   "#b0b0b0")
       (cursor       "#00ffff")
 
