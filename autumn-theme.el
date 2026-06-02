@@ -59,6 +59,8 @@
       (colorD-bg    "#4A4060")
       (colorD-bg2   "#29252e")
 
+      (smerge       bluefg3)
+
       (useless      "#602929")
 
       (ansi-bold-blue "#5b90bf")
@@ -301,12 +303,12 @@
      ;;
      ;; smerge
      ;;
-     `(smerge-base ((t (:background "#181818"))))
-     `(smerge-lower ((t (:background "#181818"))))
-     `(smerge-markers ((t (:background "#181818"))))
+     `(smerge-markers ((t (:foreground ,smerge))))
+     `(smerge-upper ((t (:background ,colorrem-bg2 :extend t))))
+     `(smerge-base ((t (:background ,colorC-bg2 :extend t))))
+     `(smerge-lower ((t (:background ,coloradd-bg2 :extend t))))
      `(smerge-refined-added ((t (:background ,coloradd-bg))))
      `(smerge-refined-removed ((t (:background ,colorrem-bg))))
-     `(smerge-upper ((t (:background "#181818"))))
 
      ;;
      ;; magit
@@ -329,12 +331,15 @@
      `(magit-diff-revision-summary-highlight ((t ())))
 
      `(magit-diff-none ((nil ())))
-     ;`(magit-diff-removed-highlight ((t (:background ,background :foreground ,colorrem))))
-     ;`(magit-diff-added-highlight ((t (:background ,background :foreground ,coloradd))))
      `(magit-diff-removed-highlight ((t (:background ,bg-hl :foreground ,colorrem))))
      `(magit-diff-added-highlight ((t (:background ,bg-hl :foreground ,coloradd))))
+     `(magit-diff-base-highlight ((t (:background ,bg-hl :foreground ,colorC))))
      `(magit-diff-removed ((t (:foreground ,colorrem))))
      `(magit-diff-added ((t (:foreground ,coloradd))))
+     `(magit-diff-base ((t (:foreground ,colorC))))
+     `(magit-diff-our-heading ((t (:inherit smerge-markers))))
+     `(magit-diff-base-heading ((t (:inherit smerge-markers))))
+     `(magit-diff-their-heading ((t (:inherit smerge-markers))))
 
      `(magit-branch-local ((t (:foreground "DarkSeaGreen2"))))
      `(magit-branch-remote ((t (:foreground "LightSkyBlue1"))))
