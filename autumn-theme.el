@@ -252,17 +252,23 @@
      ;; `(compilation-warning ((t (:foreground "#66D466" :weight normal :underline nil))))
      ;; `(compilation-info ((t (:foreground "#79B379" :weight normal :underline nil))))
 
-     `(flymake-errline ((t (:background unspecified :underline "#CC2222"))))
-     `(flymake-warnline ((t (:background unspecified :underline "#22CC22"))))
-     `(flymake-note ((nil)))
+     `(flymake-error ((t (:background unspecified :underline (:color "#CC2222" :style dots)))))
+     `(flymake-warning ((t (:background unspecified :underline (:color "#FFBB00" :style dots)))))
+     `(flymake-note ((t (:background unspecified :underline (:color "#22CC22" :style dots)))))
 
      `(rtags-errline ((t (:background unspecified :underline "#CC2222"))))
      `(rtags-warnline ((t (:background unspecified :underline "#22CC22"))))
      `(rtags-fixitline ((t (:background unspecified :underline "#FFBB00"))))
 
+     `(flycheck-warning   ((t (:inherit flymake-warning))))
+     `(flycheck-error   ((t (:inherit flymake-error))))
+     `(flycheck-info   ((t (:inherit flymake-note))))
+
      `(flycheck-inline-error   ((t (:inherit compilation-error   :background "#181818" :box (:line-width 4 :color "#181818")))))
      `(flycheck-inline-info    ((t (:inherit compilation-info    :background "#181818" :box (:line-width 4 :color "#181818")))))
      `(flycheck-inline-warning ((t (:inherit compilation-warning :background "#181818" :box (:line-width 4 :color "#181818")))))
+
+     `(eglot-diagnostic-tag-unnecessary-face ((t (:foreground ,bluefg4))))
 
      ;;
      ;; ediff
