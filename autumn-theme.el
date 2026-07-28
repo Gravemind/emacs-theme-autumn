@@ -347,6 +347,7 @@
      `(magit-diff-base-heading ((t (:inherit smerge-markers))))
      `(magit-diff-their-heading ((t (:inherit smerge-markers))))
 
+     `(magit-head ((t (:inherit magit-branch-current))))
      `(magit-branch-local ((t (:foreground "DarkSeaGreen2"))))
      `(magit-branch-remote ((t (:foreground "LightSkyBlue1"))))
      `(magit-branch-upstream ((t (:foreground "LightSkyBlue1" :box (:line-width 1 :color "LightSkyBlue1")))))
