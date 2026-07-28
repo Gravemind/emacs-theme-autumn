@@ -50,7 +50,7 @@
       (colorrem-bg  "#553535")
       (colorrem-bg2 "#2f2523")
       (coloradd     "#6AAB6A")
-      (coloradd-bg  "#3A5A3A")
+      (coloradd-bg  "#294029")
       (coloradd-bg2 "#232c24")
       (colorC       "#b6a849")
       (colorC-bg    "#6A6230")
